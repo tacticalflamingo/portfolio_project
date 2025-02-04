@@ -1,12 +1,11 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: Dominic Vallort
+- **Dot Number**: vallort.2
+- **Due Date**: 2/4/2025 @ 12:40PM
 
 ## Assignment Overview
 
-<!-- TODO: read the assignment overview then delete this comment -->
 
 The overall goal of the portfolio project is to have you design and implement
 your own OSU component. There are no limits to what you choose to design and
@@ -29,7 +28,6 @@ implement.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -52,7 +50,6 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
 
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
@@ -67,7 +64,6 @@ project. Specifically, students should be able to:
 
 ## Assignment Rubric: 10 Points
 
-<!-- TODO: read the assignment rubric then delete this comment -->
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -106,15 +102,17 @@ Below is further rationale/explanation for the rubric items above:
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-<!-- TODO: briefly talk about your interests then delete this comment.
-Also, protip: you can preview what your response looks like by hitting
-the magnifying glass icon in the upper-right corner or pressing CTRL+K and
-then V. This kind of button combination is called a chord, for whatever
-reason -->
+
+I enjoy following sports, particularly the NFL and NBA, to a ridiculous degree.
+I love movies and music and the messages, or lack there of, behind them. I also
+enjoying going outside and hiking or biking. I workout a bit in my freetime.
+I also enjoy playing video games here and there. My career goals are to potentially
+go into software development, cybersecurity, or AI. I have also recently joined
+the consulting club here on campus, BUCC, and may want to go into IT consulting
+considering the tech job market currently.
 
 ## Assignment
 
-<!-- TODO: read the assignment section then delete this comment -->
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
@@ -122,7 +120,6 @@ that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
 
-<!-- TODO: browse the list of possible projects then delete this comment -->
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -132,7 +129,6 @@ you're just brainstorming right now. You do not have to commit to anything.
 
 ### Example Component
 
-<!-- TODO: review this example component then delete this comment -->
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -200,68 +196,85 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1: Music Playlist
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    The purpose of this component is to model a music playlist.
+    The intent with this design is to keep a simple kernel that
+    provides the minimum functionality needed to add or remove a song.
+    Then, I provide more complex features in the secondary
+    interface.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `void addToPlaylist(Song s)`: Adds a song to the playlist.
+    - `void removeFromPlaylist(Song s)`: Removes a song from the playlist.
+    - `String getSongName()`: Retrieves the name of a song.
+    - `String getArtist()`: Retrieves the artist of a song.
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `boolean inPlaylist(Song s)`: Checks if a song is in the playlist.
+    - `void shuffle()`: Shuffles the songs in the playlist.
+    - `void loop()`: Loops the playlist.
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, because the entire point of a playlist is to have a collections of songs that can be changed after its creation. You may also want to copy a playlist and add a few different songs to change up the vibe or maybe start a new.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Instead of having my arguments be a String of the name of the song I could instead create a song class that requires the name of the song, the artist, the runtime, and maybe the album cover.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No it shouldn't need any because there wouldn't be any computations.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, the addToPlaylist and removeFromPlaylist methods are enough to manipulate our playlist as intended. For example the shuffle() method could easily be done by using removeFromPlaylist all of our songs and storing them in a list. Then randomly removing them from said list and using addToPlaylist to put them back in our playlist in a random order.
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
+- Component Design #2: Bank Account
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - The purpose of this component is to model the movement of funds in a bank account. The intent is to keep a simple kernel that provides the minimum functionality needed to represent a bank account, while secondary methods provide more complex financial operations.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - void deposit(double amount): Adds money to the account.
+    - void withdraw(double amount): Removes money from the account.
+    - double getBalance(): Returns the current balance.
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - void transfer(BankAccount recipient, double amount): Transfers money between accounts.
+    - boolean hasSufficientFunds(double amount): Checks if there are enough funds for a transaction.
+    - void applyInterest(double rate): Applies interest to the balance.
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, because the balance changes over time with deposits and withdrawals.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No, but it might use a Transaction class to track transaction history.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, constants like MIN_BALANCE or INTEREST_RATE could be useful.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, for example, transfer() uses withdraw() from one account and deposit() into another.
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
+- Component Design #3: File Managament
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - The purpose of this component is to model a basic file management system. The intent is to keep a simple kernel that provides the minimum functionality needed to create, delete, and retrieve files. More advanced operations will be implemented as secondary methods.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - void createFile(String name): Creates a new file.
+    - void deleteFile(String name): Deletes a specified file.
+    - boolean fileExists(String name): Checks if a file exists.
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - void renameFile(String oldName, String newName): Renames an existing file.
+    - void moveFile(String fileName, String newDirectory): Moves a file to a different directory.
+    - void copyFile(String source, String destination): Copies a file to a new location.
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, since files can be created, deleted, and modified.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Possibly, a FileMetadata class to store details like file size and creation date.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No, since file names and directories are managed dynamically.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, for example, renameFile() could be implemented by using createFile with the new name and deleting the old file using deleteFile.
 
 ## Post-Assignment
 
@@ -270,7 +283,6 @@ completed the assignment.
 
 ### Changelog
 
-<!-- TODO: create CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -288,13 +300,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
-## YYYY.MM.DD
+## 2025.02.04
 
 ### Added
 
-- Designed a <!-- insert name of component 1 here --> component
-- Designed a <!-- insert name of component 2 here --> component
-- Designed a <!-- insert name of component 3 here --> component
+- Designed a Music Playlist component
+- Designed a Bank Account component
+- Designed a File Managment component
 ```
 
 Here `YYYY.MM.DD` would be the date of your submission, such as 2024.04.21.
@@ -309,7 +321,6 @@ of development.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
 
 If you have completed the assignment using this template, we recommend that
 you convert it to a PDF before submission. If you're not sure how, check out
@@ -323,7 +334,6 @@ you have to submit any PDFs.
 
 ### Peer Review
 
-<!-- TODO: review the peer review guidelines then delete this comment -->
 
 Following the completion of this assignment, you will be assigned three
 students' component brainstorming assignments for review. Your job during the
@@ -350,7 +360,6 @@ If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
 
-<!-- TODO: follow the link to share your feedback then delete this comment -->
 
 [example-components]: https://therenegadecoder.com/code/the-never-ending-list-of-small-programming-project-ideas/
 [markdown-to-pdf-guide]: https://therenegadecoder.com/blog/how-to-convert-markdown-to-a-pdf-3-quick-solutions/
