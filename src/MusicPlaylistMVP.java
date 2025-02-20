@@ -11,8 +11,11 @@ class Song {
 
     /**
      * Constructs a Song with the given name and artist.
-     * @param name The name of the song.
-     * @param artist The artist of the song.
+     * 
+     * @param name
+     *            The name of the song.
+     * @param artist
+     *            The artist of the song.
      */
     public Song(String name, String artist) {
         this.name = name;
@@ -21,6 +24,7 @@ class Song {
 
     /**
      * Gets the name of the song.
+     * 
      * @return The name of the song.
      */
     public String getName() {
@@ -29,6 +33,7 @@ class Song {
 
     /**
      * Gets the artist of the song.
+     * 
      * @return The artist of the song.
      */
     public String getArtist() {
@@ -37,6 +42,7 @@ class Song {
 
     /**
      * Returns a string representation of the song.
+     * 
      * @return The song name and artist.
      */
     @Override
@@ -60,7 +66,9 @@ class Playlist {
 
     /**
      * Adds a song to the playlist.
-     * @param s The song to add.
+     * 
+     * @param s
+     *            The song to add.
      */
     public void addToPlaylist(Song s) {
         this.songs.add(s);
@@ -68,7 +76,9 @@ class Playlist {
 
     /**
      * Removes a song from the playlist.
-     * @param s The song to remove.
+     * 
+     * @param s
+     *            The song to remove.
      */
     public void removeFromPlaylist(Song s) {
         this.songs.remove(s);
@@ -76,7 +86,9 @@ class Playlist {
 
     /**
      * Checks if a song is in the playlist.
-     * @param s The song to check.
+     * 
+     * @param s
+     *            The song to check.
      * @return True if the song is in the playlist, false otherwise.
      */
     public boolean inPlaylist(Song s) {
@@ -102,7 +114,9 @@ class Playlist {
 
     /**
      * The main method to demonstrate the functionality of the Playlist class.
-     * @param args Command-line arguments (not used).
+     * 
+     * @param args
+     *            Command-line arguments (not used).
      */
     public static void main(String[] args) {
         Playlist myPlaylist = new Playlist();
