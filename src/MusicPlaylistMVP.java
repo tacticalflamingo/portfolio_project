@@ -2,9 +2,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-record Song(String name, String artist) {
-}
-
 /**
  * Represents a playlist containing multiple songs.
  */

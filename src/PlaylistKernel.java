@@ -1,4 +1,3 @@
-import java.util.List;
 
 import components.standard.Standard;
 
@@ -7,17 +6,6 @@ import components.standard.Standard;
  * a collection of songs.
  */
 public interface PlaylistKernel extends Standard<Playlist> {
-
-    /**
-     * A list to store the songs in the playlist. It should be initialized by
-     * implementing classes.
-     */
-    List<Song> songs = null;
-
-    /**
-     * Initializes an empty playlist.
-     */
-    void Playlist();
 
     /**
      * Adds a song to the playlist.
