@@ -1,4 +1,3 @@
-import java.util.List;
 
 /**
  * Represents a playlist with additional functionalities such as shuffling and
@@ -7,20 +6,29 @@ import java.util.List;
 public abstract class PlaylistSecondary implements Playlist {
 
     /**
-     * A list to store the songs in the playlist. It should be initialized by
-     * implementing classes.
-     */
-    List<Song> songs = null;
-
-    /**
      * Randomly shuffles the order of songs in the playlist.
      */
     @Override
-    public void shuffle();
+    public void shuffle() {
+
+    }
 
     /**
-     * Displays all the songs currently in the playlist.
+     * Compresses and returns the entirety of the playlist as a string with ":"
+     * seperating each {@code Song}
      */
     @Override
-    public void displayPlaylist();
+    public String savePlaylist() {
+
+        return "";
+    }
+
+    /**
+     * Askes the user for a {@code String} and populate {@code this} with the
+     * provided playlist
+     */
+    @Override
+    public void loadPlaylist(String playlist) {
+
+    }
 }

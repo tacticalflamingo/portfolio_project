@@ -7,10 +7,17 @@ public interface Playlist extends PlaylistKernel {
     /**
      * Randomly shuffles the order of songs in the playlist.
      */
-    void shuffle();
+    public void shuffle();
 
     /**
-     * Displays all the songs currently in the playlist.
+     * Compresses and returns the entirety of the playlist as a string with ":"
+     * seperating each {@code Song}
      */
-    void displayPlaylist();
+    public String savePlaylist();
+
+    /**
+     * Askes the user for a {@code String} and populate {@code this} with the
+     * provided playlist
+     */
+    public void loadPlaylist(String playlist);
 }

@@ -11,17 +11,16 @@ public interface PlaylistKernel extends Standard<Playlist> {
      * Adds a song to the playlist.
      *
      * @param s
-     *            The song to add to the playlist.
+     *            The {@code song} to add to the playlist.
      */
-    void addToPlaylist(Song s);
+    public void addToPlaylist(Song s);
 
     /**
-     * Removes a song from the playlist if it exists.
+     * Removes a random song from the playlist if it exists.
      *
-     * @param s
-     *            The song to remove from the playlist.
+     * @return the {@code Song} removed from {@code this}
      */
-    void removeFromPlaylist(Song s);
+    public Song removeAnyFromPlaylist();
 
     /**
      * Checks whether a song is present in the playlist.
@@ -31,5 +30,12 @@ public interface PlaylistKernel extends Standard<Playlist> {
      * @return {@code true} if the song is in the playlist, {@code false}
      *         otherwise.
      */
-    boolean inPlaylist(Song s);
+    public boolean inPlaylist(Song s);
+
+    /**
+     * Returns the size of the playlist
+     *
+     * @return |this|
+     */
+    public int size();
 }

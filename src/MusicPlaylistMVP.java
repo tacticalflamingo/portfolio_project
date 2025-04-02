@@ -5,13 +5,13 @@ import java.util.List;
 /**
  * Represents a playlist containing multiple songs.
  */
-class Playlist {
+class PlaylistMVP {
     private List<Song> songs;
 
     /**
      * Constructs an empty playlist.
      */
-    public Playlist() {
+    public PlaylistMVP() {
         this.songs = new ArrayList<>();
     }
 
@@ -70,7 +70,7 @@ class Playlist {
      *            Command-line arguments (not used).
      */
     public static void main(String[] args) {
-        Playlist myPlaylist = new Playlist();
+        PlaylistMVP myPlaylist = new PlaylistMVP();
 
         // Creating sample songs
         Song song1 = new Song("Shape of You", "Ed Sheeran");
