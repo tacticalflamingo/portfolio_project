@@ -6,6 +6,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
+## 2025.04.02
+
+### Added
+
+- Designed abstract class for Playlist component
+- Added the PlaylistSecondary
+
+### Updated
+
+- Changed design to include different secondary methods than originally
+implemented
+- Completed all of the bodies for the methods within PlaylistSecondary
+
 ## 2025.03.26
 
 ### Added
